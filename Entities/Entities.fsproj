@@ -6,11 +6,8 @@
   <ItemGroup>
     <None Include="paket.references" />
     <Compile Include="Domain.fs" />
-    <Compile Include="Board.fs" />
+    <Compile Include="Entities.fs" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <ProjectReference Include="..\Entities\Entities.fsproj" />
-  </ItemGroup>
   <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>
