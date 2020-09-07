@@ -1,6 +1,9 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Microsoft.VisualBasic;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+
+using Domain;
 
 namespace project_freyr
 {
@@ -8,6 +11,7 @@ namespace project_freyr
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        private SpriteFont consolas;
 
         public Game1()
         {
@@ -26,6 +30,7 @@ namespace project_freyr
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
+            consolas = Content.Load<SpriteFont>("Consolas");
 
             // TODO: use this.Content to load your game content here
         }
@@ -42,8 +47,13 @@ namespace project_freyr
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-
+            GraphicsDevice.Clear(Color.Black);
+            _spriteBatch.Begin();
+            foreach (var entity in Board.tiles)
+            {
+                _spriteBatch.DrawString(consolas, entity.character.ToString(), new Vector2(0, 0), entity.colour, 0, new Vector2(entity.position.Item1, entity.position.Item2) * -12, 1f, SpriteEffects.None, 0);
+            }
+            _spriteBatch.End();
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
