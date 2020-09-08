@@ -5,9 +5,15 @@ open Microsoft.Xna.Framework
 module Entities =
     let watter = 
         { character = '~'
-          colour = Color.Blue 
+          colour = Color.DeepSkyBlue
           movement = Static}
+
     let grass =
         { character = '#'
           colour = Color.YellowGreen 
+          movement = Static}
+
+    let stone =
+        { character = '^'
+          colour = Color.LightGray
           movement = Static}
