@@ -5,7 +5,6 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Board.fs" />
     <None Include="Content\bin\DesktopGL\Content\Consolas.xnb" />
     <None Include="Content\Consolas.spritefont" />
     <None Include="Content\obj\DesktopGL\Content\.mgcontent" />
@@ -16,6 +15,7 @@
     <EmbeddedResource Include="Icon.bmp" />
     <EmbeddedResource Include="Icon.ico" />
     <None Include="paket.references" />
+    <Compile Include="Board.fs" />
     <Compile Include="Game.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
