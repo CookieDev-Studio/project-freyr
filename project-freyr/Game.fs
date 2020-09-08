@@ -13,7 +13,7 @@ type ProjectFreyr () as x =
     let mutable spriteBatch = null
     let mutable consolas = null
 
-    let worldSize = 1000
+    let worldSize = 100
     let chunkSize = 35
 
     let world = WorldOperations.generateWorld worldSize
@@ -62,6 +62,6 @@ type ProjectFreyr () as x =
                 entity.character.ToString(),
                 new Vector2( float32 x, float32 y ) * tileDistance / (chunkSize |> float32),
                 entity.colour))
- 
+
         spriteBatch.End()
         ()

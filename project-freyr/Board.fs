@@ -25,7 +25,7 @@ module WorldOperations =
 
         { tiles = generatedTiles }
 
-    let getChunk chunkSize (world : World) (rootY, rootX) =
+    let getChunk chunkSize (world : World) root =
         let createChunk rootY rootX = 
             { root = (rootY, rootX)
               tiles = Array2D.init chunkSize chunkSize 
@@ -33,13 +33,9 @@ module WorldOperations =
                               world.tiles.[rootY + y, rootX + x] ) }
 
         let worldSize = world.tiles.GetUpperBound 0
-        if rootY + chunkSize > worldSize then
-            createChunk (rootY - (rootY + chunkSize - worldSize)) rootX
-        elif rootY < 0 then
-            createChunk (rootY + 1) rootX
-        elif rootX + chunkSize > worldSize then
-            createChunk rootY (rootX - (rootX + chunkSize - worldSize))
-        elif rootX < 0 then
-            createChunk rootY (rootX + 1)
-        else
-            createChunk rootY rootX
+        match root with
+        | y, x when y + chunkSize > worldSize -> createChunk (y - (y + chunkSize - worldSize)) x
+        | y, x when y < 0 -> createChunk (y + 1) x
+        | y, x when x + chunkSize > worldSize -> createChunk y (x - (x + chunkSize - worldSize))
+        | y, x when x < 0 -> createChunk y (x + 1)
+        | y, x -> createChunk y x
