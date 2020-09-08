@@ -3,7 +3,7 @@
 open Microsoft.Xna.Framework
 
 module Entities =
-    let watter = 
+    let water = 
         { character = '~'
           colour = Color.DeepSkyBlue
           movement = Static}

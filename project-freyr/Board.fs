@@ -19,7 +19,7 @@ module WorldOperations =
                     let random = Random()
                     let number = random.Next(3)
                     match number with
-                    | 1 -> Entities.watter                                                                                                    
+                    | 1 -> Entities.water                                                                                                    
                     | 2 -> Entities.grass 
                     | _ -> Entities.stone )
 
