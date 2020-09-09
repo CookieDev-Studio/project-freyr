@@ -12,8 +12,8 @@ namespace project_freyr
         private SpriteBatch _spriteBatch;
         private SpriteFont consolas;
 
-        private int worldSize = 100;
-        private int chunkSize = 35;
+        private int worldSize = 200;
+        private int chunkSize = 45;
 
         private World world;
         private Chunk viewedChunk;
