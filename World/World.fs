@@ -85,5 +85,8 @@ module WorldOperations =
             |> growLand
             |> growLand
             |> growLand
+            |> growLand
+            |> growLand
+            |> growLand
 
         { tiles = generatedTiles }
