@@ -63,7 +63,6 @@ module WorldOperations =
                     |x when x = Entities.grass -> entity
                     |_ -> determineTile (getNeighbours (x, y) tiles) entity)
 
-
         let generatedTiles =
             initiateTiles
             |> spawnLand

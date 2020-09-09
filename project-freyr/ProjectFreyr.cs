@@ -13,7 +13,7 @@ namespace project_freyr
         private SpriteFont consolas;
 
         private int worldSize = 200;
-        private int chunkSize = 45;
+        private int chunkSize = 48;
 
         private World world;
         private Chunk viewedChunk;
