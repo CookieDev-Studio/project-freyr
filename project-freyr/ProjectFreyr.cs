@@ -65,6 +65,8 @@ namespace project_freyr
 
             _spriteBatch.Begin();
 
+            _spriteBatch.DrawString(consolas, "Controls:", new Vector2(_graphics.PreferredBackBufferWidth / 4 * 3, 20), Color.White);
+
             for (var x = 0; x < chunkSize; x++)
                 for (var y = 0; y < chunkSize; y++)
                 {
