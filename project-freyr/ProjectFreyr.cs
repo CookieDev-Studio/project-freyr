@@ -2,7 +2,6 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Board;
-using System.Runtime.CompilerServices;
 
 namespace project_freyr
 {
