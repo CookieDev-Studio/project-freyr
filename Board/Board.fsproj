@@ -5,11 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Domain.fs" />
     <None Include="Script1.fsx" />
     <Compile Include="World.fs" />
   </ItemGroup>
-
-  <ItemGroup />
 
   <ItemGroup>
     <ProjectReference Include="..\Entities\Entities.fsproj" />

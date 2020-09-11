@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Board;
+using System.Numerics;
 
 namespace project_freyr
 {
@@ -11,14 +12,16 @@ namespace project_freyr
         private SpriteBatch _spriteBatch;
         private SpriteFont consolas;
 
-        private int worldSize = 200;
+        private readonly int worldSize;
         private int chunkSize = 48;
 
         private World world;
         private Chunk viewedChunk;
 
-        public ProjectFreyr()
+        public ProjectFreyr(int worldSize)
         {
+            this.worldSize = worldSize;
+
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
